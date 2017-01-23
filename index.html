@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Apps Secreenshot - iBacor</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- Font-awesome -->
+		<link type="text/css" rel="stylesheet" href="vendor/css/font-awesome.min.css" />
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+		<!-- miniColors -->
+		<link type="text/css" rel="stylesheet" href="vendor/css/jquery.miniColors.css" />
+		<!-- appScreenshot -->
+		<link type="text/css" rel="stylesheet" href="src/css/apps-screenshot.css" />
+				
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9" id="appScreenshot">
+					<div class="ftool">
+						<div class="clearfix">
+							<div class="btn-group inline pull-left" id="textEditor">						  
+								<button id="font-family" class="btn btn-success dropdown-toggle" data-toggle="dropdown" title="Font Style"><i class="fa fa-font"></i></button>		                      
+								<ul class="dropdown-menu" role="menu" aria-labelledby="font-family-X">
+									<li><a tabindex="-1" href="#" class="tfont Arial">Arial</a></li>
+									<li><a tabindex="-1" href="#" class="tfont Helvetica">Helvetica</a></li>
+									<li><a tabindex="-1" href="#" class="tfont MyriadPro">Myriad Pro</a></li>
+									<li><a tabindex="-1" href="#" class="tfont Delicious">Delicious</a></li>
+									<li><a tabindex="-1" href="#" class="tfont Verdana">Verdana</a></li>
+									<li><a tabindex="-1" href="#" class="tfont Georgia">Georgia</a></li>
+									<li><a tabindex="-1" href="#" class="tfont Courier">Courier</a></li>
+									<li><a tabindex="-1" href="#" class="tfont ComicSansMS">Comic Sans MS</a></li>
+									<li><a tabindex="-1" href="#" class="tfont Impact">Impact</a></li>
+									<li><a tabindex="-1" href="#" class="tfont Monaco">Monaco</a></li>
+									<li><a tabindex="-1" href="#" class="tfont Optima">Optima</a></li>
+									<li><a tabindex="-1" href="#" class="tfont Hoefler Text">Hoefler Text</a></li>
+									<li><a tabindex="-1" href="#" class="tfont Plaster">Plaster</a></li>
+									<li><a tabindex="-1" href="#" class="tfont Engagement">Engagement</a></li>
+								</ul>
+								<button id="text-bold" class="btn btn-success" data-original-title="Bold"><i class="fa fa-bold"></i></button>
+								<button id="text-italic" class="btn btn-success" data-original-title="Italic"><i class="fa fa-italic"></i></button>
+								<button id="text-strike" class="btn btn-success" title="Strike" style=""><i class="fa fa-strikethrough"></i></button>
+								<button id="text-underline" class="btn btn-success" title="Underline" style=""><i class="fa fa-underline"></i></button>
+								<button id="text-left" class="btn btn-success" title="Align left" style=""><i class="fa fa-align-left"></i></button>
+								<button id="text-center" class="btn btn-success" title="Align center" style=""><i class="fa fa-align-center"></i></button>
+								<button id="text-right" class="btn btn-success" title="Align right" style=""><i class="fa fa-align-right"></i></button>
+								<a class="btn btn-success" href="#" rel="tooltip" data-placement="top" data-original-title="Font Color"><input type="hidden" id="text-fontcolor" class="color-picker" size="7" value="#000000"></a>
+								<a class="btn btn-success" href="#" rel="tooltip" data-placement="top" data-original-title="Font Border Color"><input type="hidden" id="text-strokecolor" class="color-picker" size="7" value="#000000"></a>
+								<a class="btn btn-success" href="#" rel="tooltip" data-placement="top" data-original-title="Font Background Color"><input type="hidden" id="text-bgcolor" class="color-picker" size="7" value="#ffffff"></a>
+							</div>							  
+							<div class="pull-right" align="" id="imgEditor">
+								<div class="btn-group">										      
+									<button class="btn btn-success" id="bring-to-front" title="Bring to Front"><i class="fa fa-step-backward rotate"></i></button>
+									<button class="btn btn-success" id="send-to-back" title="Send to Back"><i class="fa fa-step-forward rotate"></i></button>
+									<button id="remove-selected" class="btn btn-success" title="Delete selected item"><i class="fa fa-trash"></i></button>
+								</div>
+							</div>			  
+						</div>
+					</div>	
+					<div id="appDiv">					
+						<div id="drawingArea">											
+							<canvas id="tcanvas" width="380" height="800"></canvas>
+						</div>
+						<div class="device device-android">
+							<div class="sc"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3" id="appPanel">
+					<div class="aws">
+						<h4>Device</h4>
+						<select id="deviceTypes" class="form-control">                      
+							<option value="device-android" selected="selected">Android</option>                       
+							<option value="device-iphone">iPhone</option>                        
+							<option value="device-windows">Windows Phone</option>                 
+							<option value="device-samsung">Samsung</option>                      
+							<option value="device-nexus">Nexus</option>                  
+							<option value="device-htc">HTC</option>                 
+							<option value="device-tablet">Tablet</option>
+						</select>
+					</div>
+					<div class="aws">
+						<h4>Background</h4>
+						<select id="bcTypes" class="form-control">                      
+							<option value="slim" selected="selected">Slim</option>                       
+							<option value="big">Big</option> 
+						</select>
+						<input type="text" id="ts-bcolor" class="color-picker" size="7" value="#69c3ff">
+					</div>
+					<div class="aws">
+						<h4>Screenshot</h4>
+						<input type="file" id="inputBgr">
+					</div>
+					<div class="aws">
+						<h4>Image</h4>
+						<input type="file" id="inputImg">
+						<img class="img-polaroid" src="src/img/gp.png">
+						<img class="img-polaroid" src="src/img/as.png">
+					</div>
+					<div class="aws">
+						<h4>Caption</h4>
+						<textarea class="form-control" id="text-string" type="text" placeholder="add text here..."></textarea>
+						<button type="submit" id="add-text" class="btn btn-primary">Add</button>
+					</div>
+					<input type="submit" id="saveImg" class="btn btn-danger" value="Save As"/>
+				</div>
+			</div>
+		</div>
+		<footer>
+			Built with <a href="http://fabricjs.com/" target="_blank">Fabric.js</a>. Developed by <a href="https://github.com/bachors/Apps-Screenshot" target="_blank">@bachors</a>
+		</footer>
+
+		<!-- jQuery -->
+		<script src="vendor/js/jquery-1.7.2.min.js"></script>	
+		<!-- Bootstrap -->
+		<script src="vendor/js/bootstrap.min.js"></script>
+		<!-- Excanvas -->
+		<!--[if IE]><script type="text/javascript" src="vendor/excanvas.js"></script><![endif]-->		
+		<!-- Fabric.js -->
+		<script type="text/javascript" src="vendor/js/fabric.js"></script>		
+		<!-- miniColors -->
+		<script type="text/javascript" src="vendor/js/jquery.miniColors.min.js"></script>		
+		<!-- html2canvas -->
+		<script type="text/javascript" src="vendor/js/html2canvas.min.js"></script>		
+		<!-- appScreenshot -->
+		<script src="src/js/apps-screenshot.js"></script>
+		<script>
+		$(function() {
+			appScreenshot();
+		});
+		</script>
+		
+	</body>
+</html>

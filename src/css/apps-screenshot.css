@@ -1,0 +1,263 @@
+/************************************************
+ * #### Apps Screenshot ####
+ * Built with Fabric.js.
+ * Developed by @bachors 2017.
+ * https://github.com/bachors/Apps-Screenshot
+ * Updates will be posted to this site.
+ ***********************************************/
+footer {
+	color: #aaa;
+	text-align: center;
+	padding: 20px;
+	margin-top: 20px;
+	background: #f2f2f2;
+	border-top: 1px solid #e4e4e4;
+}
+
+footer a,
+footer a:hover {
+	color: #333;
+	text-decoration: underline
+}
+
+/* main */
+#appScreenshot {
+	padding-bottom: 20px;
+	background: url('../img/preview.png')
+}
+
+#appScreenshot .color-preview {
+	border: 1px solid #CCC;
+	margin: 2px;
+	zoom: 1;
+	vertical-align: top;
+	display: inline-block;
+	cursor: pointer;
+	overflow: hidden;
+	width: 20px;
+	height: 20px;
+}
+
+#appScreenshot .rotate {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+}
+
+#appScreenshot .Arial {
+	font-family: "Arial";
+}
+
+#appScreenshot .Helvetica {
+	font-family: "Helvetica";
+}
+
+#appScreenshot .MyriadPro {
+	font-family: "Myriad Pro";
+}
+
+#appScreenshot .Delicious {
+	font-family: "Delicious";
+}
+
+#appScreenshot .Verdana {
+	font-family: "Verdana";
+}
+
+#appScreenshot .Georgia {
+	font-family: "Georgia";
+}
+
+#appScreenshot .Courier {
+	font-family: "Courier";
+}
+
+#appScreenshot .ComicSansMS {
+	font-family: "Comic Sans MS";
+}
+
+#appScreenshot .Impact {
+	font-family: "Impact";
+}
+
+#appScreenshot .Monaco {
+	font-family: "Monaco";
+}
+
+#appScreenshot .Optima {
+	font-family: "Optima";
+}
+
+#appScreenshot .HoeflerText {
+	font-family: "Hoefler Text";
+}
+
+#appScreenshot .Plaster {
+	font-family: "Plaster";
+}
+
+#appScreenshot .Engagement {
+	font-family: "Engagement";
+}
+
+#appScreenshot .ftool {
+	min-height: 40px
+}
+
+#appScreenshot #textEditor,
+#appScreenshot #imgEditor {
+	display: none
+}
+
+#appScreenshot #appDiv {
+	margin: auto;
+	padding: 120px 0px 120px 0px;
+	width: 400px; 
+	height: auto; 
+	position: relative; 
+	background-color: rgb(105, 195, 255)
+}
+
+#appScreenshot #appDiv #drawingArea {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 10;
+	width: 380px;
+	height: auto
+}
+
+#appScreenshot #appDiv #drawingArea #tcanvas {
+	-webkit-user-select: none
+}
+
+#appPanel {
+	margin-top: 20px
+}
+
+#appPanel .aws {
+	margin-bottom: 20px;
+	padding: 5px 10px 10px;
+	border: 1px solid #ccc;
+	background: #f5f5f5
+}
+
+#appPanel .aws h4 {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ddd;
+}
+
+#appPanel #bcTypes {
+	margin-bottom: 5px
+}
+
+#appPanel #inputImg {
+	margin-bottom: 10px
+}
+
+#appPanel #ts-bcolor {
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+#appPanel .img-polaroid {
+	cursor: pointer;
+	width: 100px
+}
+
+#appPanel #text-string {
+	height: 108px;
+	margin-bottom: 5px
+}
+
+#appPanel #saveImg {
+	float: right
+}
+
+/* template */
+.device {
+	position: relative;
+	margin:auto
+}
+
+.device .sc {
+	height: 100%;
+	overflow: hidden;
+	border: 2px solid #111;
+	background: url('../img/screenshot.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: 100% 100%
+}
+
+.device-htc {
+	width: 280px;
+	height: 574px;
+	padding: 54px 18px 87px;
+	background: url('../img/device/htc.png') no-repeat;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.device-samsung,
+.device-android {
+	width: 280px;
+	height: 574px;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.device-android {
+	padding: 59.5px 16px 108px 17px;
+	background: url('../img/device/android.png') no-repeat;
+}
+
+.device-samsung {
+	padding: 64px 16.5px 77px 16px;
+	background: url('../img/device/samsung.png') no-repeat;
+}
+
+.device-iphone,
+.device-nexus {
+	width: 280px;
+	height: 574px;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.device-iphone {
+	padding: 68px 17px 71px;
+	background: url('../img/device/iphone.png') no-repeat;
+}
+
+.device-nexus {
+	padding: 47px 16px 87px;
+	background: url('../img/device/nexus.png') no-repeat;
+}
+
+.device-windows,
+.device-tablet {
+	width: 280px;
+	height: 574px;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.device-windows {
+	padding: 62px 23px 124px;
+	background: url('../img/device/windows.png') no-repeat;
+}
+
+.device-tablet {
+	padding: 33px 17px 213px 16px;
+	background: url('../img/device/tablet.png') no-repeat;
+}
