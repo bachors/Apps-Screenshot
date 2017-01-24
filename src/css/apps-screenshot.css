@@ -174,8 +174,8 @@ footer a:hover {
 	width: 100px
 }
 
-#appPanel #text-string {
-	height: 108px;
+#appPanel .txts {
+	height: 40px;
 	margin-bottom: 5px
 }
 
