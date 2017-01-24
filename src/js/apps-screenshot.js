@@ -270,6 +270,11 @@ var appScreenshot = function customTshirt() {
 			canvas.add(image);
 		});
 	});
+	
+	$("#add-qr").click(function() {
+		updateQRImage($("#qr-string").val());
+		return false;
+	});
 
 	function getRandomNum(min, max) {
 		return Math.random() * (max - min) + min;
@@ -308,6 +313,40 @@ var appScreenshot = function customTshirt() {
 			}); //0-255, 0-255
 			activeObject.applyFilters(canvas.renderAll.bind(canvas));
 		}
+	}
+				
+	function updateQRImage(url) {
+		var c = document.createElement('canvas');
+		var ctx = c.getContext("2d");
+		var img = new Image();
+		img.onload = function() {
+			c.width  = img.naturalWidth;
+			c.height = img.naturalHeight;
+			ctx.drawImage(img, 0, 0);
+			var qrcode = c.toDataURL('png');
+			var offset = 50;
+			var left = fabric.util.getRandomInt(0 + offset, 200 - offset);
+			var top = fabric.util.getRandomInt(0 + offset, 400 - offset);
+			var angle = fabric.util.getRandomInt(-20, 40);
+			var width = fabric.util.getRandomInt(30, 50);
+			var opacity = (function(min, max) {
+				return Math.random() * (max - min) + min;
+			})(0.5, 1);
+			fabric.Image.fromURL(qrcode, function(image) {
+				image.set({
+					left: left,
+					top: top,
+					angle: 0,
+					padding: 10,
+					cornersize: 10,
+					hasRotatingPoint: true
+				});
+				//image.scale(getRandomNum(0.1, 0.25)).setCoords();
+				canvas.add(image);
+			});
+		};
+		img.crossOrigin = "google.com";
+		img.src = "http://chart.apis.google.com/chart?cht=qr&chl=" + escape(url) + "&chs=150x150&chld=H|0&key=AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0";
 	}
 
 	function readFile(evt) {
