@@ -346,7 +346,7 @@ var appScreenshot = function customTshirt() {
 			});
 		};
 		img.crossOrigin = "google.com";
-		img.src = "http://chart.apis.google.com/chart?cht=qr&chl=" + escape(url) + "&chs=150x150&chld=H|0&key=AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0";
+		img.src = "http://chart.apis.google.com/chart?cht=qr&chl=" + escape(url) + "&chs=150x150&chld=H|0";
 	}
 
 	function readFile(evt) {
